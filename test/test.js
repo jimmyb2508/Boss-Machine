@@ -14,6 +14,7 @@ describe('/api/minions routes', function() {
         .expect(200)
         .then((response) => {
           expect(response.body).to.be.an.instanceOf(Array);
+          console.log(response.body);
         });
     });
 
