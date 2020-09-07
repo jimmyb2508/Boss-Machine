@@ -14,7 +14,6 @@ describe('/api/minions routes', function() {
         .expect(200)
         .then((response) => {
           expect(response.body).to.be.an.instanceOf(Array);
-          console.log(response.body);
         });
     });
 
@@ -526,6 +525,7 @@ describe('checkMillionDollarIdea middleware', function() {
       numWeeks: 4,
       weeklyRevenue: 2,
     }
+
     checkMillionDollarIdea(req, response, nextCallback);
     expect(status).to.equal(400);
     expect(nextCalled).to.be.false;
@@ -687,7 +687,7 @@ describe('/api/meetings routes', function() {
 
 });
 
-xdescribe('BONUS: /api/minions/:minionId/work routes', function() {
+describe('BONUS: /api/minions/:minionId/work routes', function() {
 
   let fakeDb = require('../server/db.js').db;
   
